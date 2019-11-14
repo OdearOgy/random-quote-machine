@@ -1,0 +1,35 @@
+.QuoteParent {
+  padding: 1em;
+}
+
+
+
+.QuoteBody {
+  font-size: 2.5em;
+  color: #292929;
+}
+
+.QuoteImg {
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.yogajournal.com%2F.image%2Ft_share%2FMTUxMDUxNDQ2NDQyMjcyNzA5%2Ffearless.jpg&f=1&nofb=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+}
+
+
+.QuoteBtnParent {
+  text-align: center;
+  margin: 1.2em;
+}
+
+.QuoteBtn {
+  padding: .8em 1.3em;
+  border-radius: 1.5em;
+  border: none;
+  outline: none;
+  background-color: #fada27;
+  cursor: pointer;
+  margin: .5em;
+}
