@@ -4,12 +4,11 @@ import { fetchQuote } from '../helpers/fetchHelper'
 
 export function Quote() {
 
-
-
-  const handleTweetclick = (event) => {
+  const handleTweetClick = (event) => {
     const aElm = event.target.closest('a');
-    let quoteText = document.querySelector('#text');
-    aElm.href += quoteText.textContent;
+    let qText = document.querySelector('#text');
+    let qAuthor = document.querySelector('#author');
+    aElm.href = `https://twitter.com/intent/tweet?text=${qText.textContent} - ${qAuthor.textContent}`;
   }
 
   const handleQuoteFetch = (event) => {
@@ -47,9 +46,8 @@ export function Quote() {
   return (
     
     <div className="QuoteParent" id="quote-box" >
-
       <div className="QuoteBody">
-        <h3 id="text">Hello, World</h3>
+        <h3 id="text">Hello, World!</h3>
         <h5 id="author">Newbie Programmer</h5>
       </div>
       {/* <div className="QuoteImg"></div> */}
@@ -58,7 +56,7 @@ export function Quote() {
       <div className="QuoteBtnParent">
         <button className="QuoteBtn" onClick={handleQuoteFetch} id="new-quote">Get More Quotes</button>
         
-        <a id="tweet-quote" href="https://twitter.com/intent/tweet?text=" onClick={handleTweetclick} target="_blank">
+        <a id="tweet-quote" href="https://twitter.com/intent/tweet?text=" onClick={handleTweetClick} target="_blank">
           <button className="QuoteBtn" >
               Tweet quote
           </button>
